@@ -1,7 +1,7 @@
 ---
 name: lionspaw-academy
 description: "Lion's Paw Academy student context — curriculum, tier gating, module map, Sigma Protocol vocabulary, tier-gated GitHub repos, Discord community, and support paths. Use when working through any Lion's Paw Academy lesson, following a lesson prompt, or building a project alongside the curriculum. Triggers on 'lion's paw', 'lionspaw', 'academy lesson', 'M0'-'M7', 'M1.5', 'T1'-'T7', 'LP0'-'LP8', 'sigma protocol', 'harness engineering', 'agentic engineering', 'quantstream', 'paw credits', 'the den'."
-version: "1.1.0"
+version: "1.1.1"
 triggers:
   - lionspaw-academy
   - lions-paw
@@ -158,7 +158,15 @@ If you paid but don't see your role within 5 minutes, hit **Settings → Discord
 ## When the Student Pastes a Prompt
 
 - **Acknowledge the module + lesson** the prompt is from before executing.
-- **Verify slash commands**: if the prompt calls `/steps:*`, `/dev:*`, `/audit:*`, `/ops:*`, or `/marketing:*` and your Claude Code says "command not found", the student hasn't installed the Sigma Protocol harness yet. Tell them to clone `Dallionking/lionspaw-claude-harness` (Builder tier) into their project's `.claude/` directory, then restart Claude Code. Link to M2 lesson 1 for setup.
+- **Verify slash commands**: if the prompt calls `/steps:*`, `/dev:*`, `/audit:*`, `/ops:*`, or `/marketing:*` and your Claude Code says "command not found", the student hasn't installed the Sigma Protocol harness yet. Point them to this concrete install (Builder tier required — they need GitHub linked first):
+  ```bash
+  # From the student's project root (NOT the Lion's Paw Web repo):
+  git clone https://github.com/Dallionking/lionspaw-claude-harness.git .claude-harness-template
+  cp -R .claude-harness-template/.claude ./.claude
+  rm -rf .claude-harness-template
+  # Then quit + relaunch Claude Code so it re-scans .claude/commands/
+  ```
+  M2 Lesson 1 walks through the full setup (agents + hooks + settings.json). If the student isn't on Builder yet, point them to `https://lionspaw.ai/pricing`.
 - **Tier-gated repos**: if a lesson references a repo and the student lacks access, name the tier + the upgrade URL `https://lionspaw.ai/pricing`.
 - **Project directory**: assume Claude Code runs in the student's own project directory, **not** the Lion's Paw Web repo. Never instruct them to edit LP-Web source files.
 - **Cost-aware**: if a prompt calls expensive APIs (LLM inference, Mux upload, WHOP mutation) without a dry-run flag, warn the student before running.

@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1] — 2026-04-20
+
+Patch: the "slash command not found" guidance in v1.1.0 said "clone into
+`.claude/`" without specifying which `.claude/` (global vs project) or how.
+Second blind test flagged this as the last remaining partial gap. v1.1.1
+replaces the line with a concrete 4-line bash block that clones
+`lionspaw-claude-harness`, overlays `.claude/` into the student's project
+root, and instructs a Claude Code restart.
+
 ## [1.1.0] — 2026-04-20
 
 Closes gaps surfaced by a fresh-Claude-instance blind test of v1.0.0:
