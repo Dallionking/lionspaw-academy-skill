@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2] — 2026-04-20
+
+Adds three sections a student would ask about that v1.1.1 couldn't answer:
+
+- **Billing + Refunds** — cancel-anytime-no-refund policy, Lifetime final-sale, Yearly not pro-rated, escalation to support@lionspaw.ai for edge cases.
+- **Cipher — the In-Academy AI Tutor** — Academy dashboard + lesson-page assistant trained on curriculum map + lesson transcripts. Clarifies Cipher vs. Donna (LP Runtime, separate).
+- **LP Native ETA** — explicitly "Coming Soon, no firm ETA" so the tutor doesn't invent launch dates.
+
 ## [1.1.1] — 2026-04-20
 
 Patch: the "slash command not found" guidance in v1.1.0 said "clone into

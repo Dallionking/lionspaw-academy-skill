@@ -1,7 +1,7 @@
 ---
 name: lionspaw-academy
 description: "Lion's Paw Academy student context — curriculum, tier gating, module map, Sigma Protocol vocabulary, tier-gated GitHub repos, Discord community, and support paths. Use when working through any Lion's Paw Academy lesson, following a lesson prompt, or building a project alongside the curriculum. Triggers on 'lion's paw', 'lionspaw', 'academy lesson', 'M0'-'M7', 'M1.5', 'T1'-'T7', 'LP0'-'LP8', 'sigma protocol', 'harness engineering', 'agentic engineering', 'quantstream', 'paw credits', 'the den'."
-version: "1.1.1"
+version: "1.1.2"
 triggers:
   - lionspaw-academy
   - lions-paw
@@ -57,7 +57,9 @@ Site: **https://lionspaw.ai**. Billing and subscriptions flow through WHOP.
 | **T6** | Prop Firm Automation |
 | **T7** | TradeBench & Optimization |
 
-### LP Native Track — Pro tier (applied projects, Coming Soon)
+### LP Native Track — Pro tier (applied projects)
+
+**Coming Soon — all LP lessons.** No firm ETA yet. Students pay for Pro knowing the core curriculum (M0-M7) is live and LP tracks land as drops over the next quarters.
 
 | Code | Title |
 |---|---|
@@ -170,6 +172,24 @@ If you paid but don't see your role within 5 minutes, hit **Settings → Discord
 - **Tier-gated repos**: if a lesson references a repo and the student lacks access, name the tier + the upgrade URL `https://lionspaw.ai/pricing`.
 - **Project directory**: assume Claude Code runs in the student's own project directory, **not** the Lion's Paw Web repo. Never instruct them to edit LP-Web source files.
 - **Cost-aware**: if a prompt calls expensive APIs (LLM inference, Mux upload, WHOP mutation) without a dry-run flag, warn the student before running.
+
+## Billing + Refunds
+
+- **Cancel anytime** from Settings → Subscription. Cancellation stops future billing at the end of the current cycle; access remains through the paid-through date.
+- **No refunds once the student has started watching lessons.** Cancellation-only is the policy. This is stated at checkout and in Settings.
+- **Lifetime is final** — the founding ($2,500) / standard ($5,000) one-time payment is not refundable once redeemed.
+- **Yearly** can be cancelled but isn't pro-rated; access runs to the end of the year you paid for.
+
+If a student asks for a refund, direct them to `support@lionspaw.ai` — policy exceptions (double-billed, access never worked, etc.) are handled case-by-case there.
+
+## Cipher — the In-Academy AI Tutor
+
+Every enrolled student gets **Cipher**, an on-platform AI tutor embedded in the Academy dashboard and lesson pages. Cipher is trained on the curriculum map (this skill file) plus transcripts of every lesson video, so it can answer curriculum questions, summarize lessons, quote specific timestamps, and guide students through prompts without them leaving the Academy.
+
+- Access: dashboard sidebar + floating chat on every lesson page
+- Scope: current curriculum + tier-gated repos + Sigma Protocol + Discord + billing
+- Out of scope: anything requiring live code execution in the student's terminal — Cipher points those to Claude Code locally
+- Cipher is the **Academy's tutor**, not a Lion's Paw Runtime feature. Students using LP Runtime on their desktop talk to **Donna**, a different assistant.
 
 ## Support + Help
 
